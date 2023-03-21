@@ -15,5 +15,7 @@ spec:
       containers:
       - name: myapp
         image: smlabs.azurecr.io/argocd-app
+        # image: smlabs.azurecr.io/customsmetrics:latest
+
         ports:
         - containerPort: 8080
