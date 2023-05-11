@@ -3,6 +3,7 @@ kind: Application
 metadata:
   name: myapp-argo-application
   namespace: argocd
+
 spec:
   project: default
 
@@ -10,6 +11,7 @@ spec:
     repoURL: https://github.com/cloudstateu/smlabs.git
     targetRevision: HEAD
     path: dev
+  
   destination: 
     server: https://kubernetes.default.svc
     namespace: myapp
@@ -19,5 +21,6 @@ spec:
     - CreateNamespace=true
 
     automated:
-      selfHeal: true
-      prune: true
+      autoSync: false # relates to automatic synchronization of resources by ArgoCD
+      selfHeal: true  # self-healing mechanism for resources in the cluster.
+      prune: true     # will remove resources that are no longer listed in the configuration
