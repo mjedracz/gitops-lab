@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: nginx:lastest
+        image: nginx:latest
         # image: smlabs.azurecr.io/customsmetrics:latest
 
         ports:
