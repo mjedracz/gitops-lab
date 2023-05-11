@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: smlabs.azurecr.io/argocd-app
+        image: nginx
         # image: smlabs.azurecr.io/customsmetrics:latest
 
         ports:
