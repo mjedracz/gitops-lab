@@ -1,5 +1,7 @@
 
-# Deployment
+# CVP - K8s, ArgoCd Lab 
+
+## Deployment
 The deployment YAML file deployment.yaml contains the configuration for deploying the application.
 ```
 apiVersion: apps/v1
@@ -24,7 +26,7 @@ spec:
 ```
 In this deployment configuration, we define a deployment named myapp with 4 replicas. The selector specifies that the deployment should manage pods with the label app: myapp. The template section defines the pod template used for creating the replicas. It contains a single container named myapp running the nginx:latest image, exposing port 8080.
 
-# Service
+## Service
 The service YAML file service.yaml defines the Kubernetes service that exposes the application.
 ```
 apiVersion: v1
